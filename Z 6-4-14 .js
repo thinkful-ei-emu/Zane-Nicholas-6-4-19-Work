@@ -59,20 +59,13 @@ repeat(hello, 5);
 
 repeat(goodbye, 5);
 
-<<<<<<< HEAD
-function filter(arr,fn) {
-  let newArray=[];
-  for(let i=0;i<arr.length;i++){
-    if(fn(arr[i])===true){
-      newArray.push(arr[i]);
-=======
+// next problem
 
 function filter(arr, fn) {
   let newArray = [];
   for (let i = 0; i < arr.length; i++){
     if (fn(arr[i]) === true){
-      newArray.push(arr[i])
->>>>>>> 57f27e213249011f6fbd80b1acdc2e3e63997ee2
+      newArray.push(arr[i]);
     }
   } return newArray;
 }
@@ -89,8 +82,12 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+
+
+
+// next problem
 
 
 function hazardWarningCreator(typeOfWarning){
@@ -120,10 +117,16 @@ rockWarning('Mount Everest');
 floodWarning('Miami Beach');
 giantKittenWarning('Your backyard');
 
+// next problem
 
+let turtleSteps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
-
-
+turtleSteps
+  .filter(step => step[0] >= 0 && step[1] >= 0)
+  .map(step => step[0] + step[1])
+  .forEach((step, index) =>{
+    console.log(`Movement #${index + 1}: ${step} steps`);
+  });
 
 
 
