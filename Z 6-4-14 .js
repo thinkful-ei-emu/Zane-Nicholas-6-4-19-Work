@@ -59,14 +59,14 @@ repeat(hello, 5);
 
 repeat(goodbye, 5);
 
-function filter(arr,fn) {
-  let newArray=[];
-  for(let i=0;i<arr.length;i++){
-    if(fn(arr)===true){
-      newArray.push(arr[i]);
+
+function filter(arr, fn) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++){
+    if (fn(arr[i]) === true){
+      newArray.push(arr[i])
     }
-  }
-  return newArray;
+  } return newArray;
 }
 
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
@@ -81,8 +81,16 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames); // => ['Rich', 'Ray']
+console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
+
+
+
+
+
+
+
+
 
 
 
