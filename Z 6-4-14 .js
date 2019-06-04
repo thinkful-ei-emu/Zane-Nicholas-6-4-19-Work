@@ -59,14 +59,22 @@ repeat(hello, 5);
 
 repeat(goodbye, 5);
 
+<<<<<<< HEAD
 function filter(arr,fn) {
   let newArray=[];
   for(let i=0;i<arr.length;i++){
     if(fn(arr[i])===true){
       newArray.push(arr[i]);
+=======
+
+function filter(arr, fn) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++){
+    if (fn(arr[i]) === true){
+      newArray.push(arr[i])
+>>>>>>> 57f27e213249011f6fbd80b1acdc2e3e63997ee2
     }
-  }
-  return newArray;
+  } return newArray;
 }
 
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
@@ -81,7 +89,7 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames); // => ['Rich', 'Ray']
+console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 
@@ -111,5 +119,13 @@ const giantKittenWarning=hazardWarningCreator('There is a large feline in your A
 rockWarning('Mount Everest');
 floodWarning('Miami Beach');
 giantKittenWarning('Your backyard');
+
+
+
+
+
+
+
+
 
 
