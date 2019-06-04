@@ -128,6 +128,22 @@ turtleSteps
     console.log(`Movement #${index + 1}: ${step} steps`);
   });
 
+// next problem
+
+let myString = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+
+let myArray = myString.split(' ');
+
+let decode = myArray.reduce((acc, word) => {
+  if (word.length === 3){
+    return acc + ' ';
+  } else {
+    return acc + word.charAt(word.length -1).toUpperCase();
+  }
+}, '')
+
+
+console.log(decode);
 
 
 
