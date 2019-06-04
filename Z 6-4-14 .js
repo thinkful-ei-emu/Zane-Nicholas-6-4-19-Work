@@ -62,7 +62,7 @@ repeat(goodbye, 5);
 function filter(arr,fn) {
   let newArray=[];
   for(let i=0;i<arr.length;i++){
-    if(fn(arr)===true){
+    if(fn(arr[i])===true){
       newArray.push(arr[i]);
     }
   }
@@ -85,6 +85,31 @@ console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 
+function hazardWarningCreator(typeOfWarning){
+  let warningCounter=0;
+  return function (location){
+    warningCounter++;
+    if(warningCounter===1){
 
+      console.log(`Danger! There is a ${typeOfWarning} hazard at ${location}!`);
+      console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time today !`);
+    }
+    else{
+      console.log(`Danger! There is a ${typeOfWarning} hazard at ${location}!`);
+      console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} times today !`);
+
+    }
+    
+  };
+}
+
+const rockWarning=hazardWarningCreator('Rocks on Road');
+const floodWarning=hazardWarningCreator('There is flooding in area');
+const giantKittenWarning=hazardWarningCreator('There is a large feline in your Area');
+
+
+rockWarning('Mount Everest');
+floodWarning('Miami Beach');
+giantKittenWarning('Your backyard');
 
 
