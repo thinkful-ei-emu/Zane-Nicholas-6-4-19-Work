@@ -31,6 +31,15 @@ function min(numbers){
   }
   return minNum;
 }
+
+function findAverage(num){
+  let total = 0;
+  num.forEach(function(element){    
+    (total += element); 
+  }); return total / num.length;
+}
+
+
   
 
 
